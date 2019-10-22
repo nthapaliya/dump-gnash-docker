@@ -2,7 +2,7 @@
 
 Steps to get this working:
 
-```
+```bash
 git clone https://github.com/nthapaliya/dump-gnash-docker
 cd dump-gnash-docker
 docker build .
@@ -16,7 +16,7 @@ If you get the error `Unable to find image '3e96d1af60ad:latest' locally`
 then you have to to edit `dump-gnash` by changing the docker image id.
 Search for it by running `docker image ls`
 
-```
+```bash
 #!/bin/bash
 
 if [[ $1 =~ preview.swf$ ]]; then
