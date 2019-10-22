@@ -4,6 +4,7 @@ ADD http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.
 
 COPY gnash-0.8.8 gnash-0.8.8
 COPY .gnashrc /root/.gnashrc
+COPY preview.swf /root/preview.swf
 
 RUN rpm -ivh epel-release-6-8.noarch.rpm; \
     yum install -y gcc-c++                \
@@ -31,7 +32,5 @@ RUN ./configure                           \
     make;                                 \
     make install;                         \
     rm -rf /gnash-0.8.8
-
-COPY preview.swf /Users/niraj/OSS/huddle/extras/preview.swf
 
 ENTRYPOINT ["dump-gnash"]
